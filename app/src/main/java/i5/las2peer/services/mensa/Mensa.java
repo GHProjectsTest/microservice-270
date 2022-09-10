@@ -82,7 +82,50 @@ public class Mensa extends RESTService {
 
     private final Mensa service = (Mensa) Context.getCurrent().getService();
 
-    
+      /**
+   * 
+   * getDishRatings
+   *
+   * 
+   *
+   * 
+   * @return Response 
+   * 
+   */
+  @GET
+  @Path("/dishes")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "res")
+  })
+  @ApiOperation(value = "getDishRatings", notes = " ")
+  public Response getDishRatings() {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // res
+    boolean res_condition = true;
+    if(res_condition) {
+      JSONObject res = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_OK).entity(res.toJSONString()).build();
+    }
+    return null;
+  }
+
+
 
   }
 
